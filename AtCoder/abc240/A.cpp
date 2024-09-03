@@ -30,7 +30,7 @@ void solve() {
 
     cin >> a >> b;
 
-    if (b - 1 == a || b - 1 == 9) {
+    if (b - a == 1 || b - a == 9) {
         cout << "Yes\n";
     } else {
         cout << "No\n";
