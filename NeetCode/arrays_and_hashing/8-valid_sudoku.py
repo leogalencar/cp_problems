@@ -16,15 +16,18 @@ class Solution:
             for j in range(3):
                 for k in range(3):
                     current = board[j + 3 * r][k + 3 * c]
-                    if current != "." and current in square:
+                    if current == ".":
+                        continue
+
+                    if current in square:
                         return False
                     square.add(current)
 
-                    if current != "." and current in rows[j + 3 * r]:
+                    if current in rows[j + 3 * r]:
                         return False
                     rows[j + 3 * r].add(current)
 
-                    if current != "." and current in cols[k + 3 * c]:
+                    if current in cols[k + 3 * c]:
                         return False
                     cols[k + 3 * c].add(current)
             c += 1
