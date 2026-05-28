@@ -19,6 +19,6 @@ class Solution:
                 l = k + 1
             else:
                 r = k - 1
-                min_k = min(min_k, k)
+                min_k = k
 
         return min_k
