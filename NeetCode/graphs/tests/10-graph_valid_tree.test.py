@@ -4,7 +4,8 @@ import sys
 
 # Add the root directory 'cp_problems' to the Python path
 # This allows us to import 'solver' from anywhere in the project
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
 from solver import run_tests
 
@@ -17,6 +18,7 @@ validTree = solution_module.Solution().validTree
 test_cases = [
     {"inputs": [5, [[0, 1], [0, 2], [0, 3], [1, 4]]], "expected": True},
     {"inputs": [5, [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]], "expected": False},
+    {"inputs": [1, [[0, 0]]], "expected": False},
 ]
 
 if __name__ == "__main__":
